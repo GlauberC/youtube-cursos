@@ -24,3 +24,14 @@
 
 ## Descrevendo uma tabela
 * DESCRIBE nome_da_tabela;
+
+## Listando todos os dados 
+* SELECT * FROM nome_da_tabela;
+
+## Listagem especifica
+* SELECT * FROM nome_da_tabela WHERE condição;
+
+## Deletando dados
+* DELETE FROM nome_da_tabela 
+* CUIDADO COM O COMANDO ACIMA
+* DELETE FROM nome_da_tabela WHERE condição;
