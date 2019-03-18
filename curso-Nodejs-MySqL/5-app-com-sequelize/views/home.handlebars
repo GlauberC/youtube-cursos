@@ -1,3 +1,20 @@
 <h1>Lista de posts: </h1>
 
-{{posts}}
+<table>
+    <thead>
+        <th>Titulo</th>
+        <th>Conteudo</th>
+        <th>Data:</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+{{#each posts}}
+    <tr>
+        <td>{{titulo}}</td>
+        <td>{{conteudo}}</td>
+        <td>{{createdAt}}</td>
+        <td><a href="/deletar/{{id}}"><button>Deletar</button></a></td>
+    </tr>
+{{/each}}
+    </tbody>
+</table>

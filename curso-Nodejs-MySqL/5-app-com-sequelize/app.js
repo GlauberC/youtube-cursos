@@ -17,17 +17,19 @@ const Post = require('./models/Post')
 
 // ROTAS
     
-    // DELETAR DPS:
-    // CONTINUAR COM O VIDEO https://www.youtube.com/watch?v=Oo8oNXyrxB0&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=25
-
+    
     app.get('/', (req, res) => {
-        Post.findAll()
+        Post.findAll()  //é possível colocar ordem crescente ou decrescente com essa função
             .then(posts => {
                 res.render('home', {posts: posts})
             })
         
     })
-    
+    app.get("/deletar/:id", (req, res) => {
+        Post.destroy({where: {'id': req.params.id}})
+            .then(() => res.send("Postagem deletada com sucesso"))
+            .catch( er => res.send("Esta postagem não existe") )
+    })
     app.get('/cad', (req, res) => res.render('formulario'))
 
     app.post('/submitPostagem', (req, res) => {
