@@ -1,0 +1,13 @@
+<h4>Categorias: </h4>
+<hr>
+{{#each categorias}}
+    <a href="/categorias/{{slug}}">
+        <div class = "card mt-2">
+            <div class ="card-body">
+                <h5>{{nome}}</h5>
+            </div>
+        </div>
+    </a>
+{{else}}
+    <h4>Nenhuma categoria cadastrada</h4>
+{{/each}}

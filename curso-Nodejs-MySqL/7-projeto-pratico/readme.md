@@ -1,7 +1,10 @@
 # Dependendencias
-* Express
-* Express-handlebars
+* express
+* express-handlebars
 * body-parser
 * mongoose
 * express-session
 * connect-flash
+* bcryptjs
+* passport
+* passport-local
