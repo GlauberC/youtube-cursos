@@ -1,0 +1,23 @@
+<h2>Lista de usuarios:</h2>
+<hr>
+{{#each usuarios}}
+
+    <div class = "card mt-4">
+        <div class = "card-body row">
+            <div class = "col-sm-6 offset-sm-2">
+                <h4>{{nome}}</h4>
+                <p>{{email}}</p>
+                <p>Privilégios de administrador: {{eAdmin}}</p>
+            </div>
+            <div class = "col-sm-4"> 
+                <a href="/admin/usuario/edit/{{_id}}"><button class = "btn btn-success">Editar usuario</button></a>
+                <form action = '/admin/usuario/deletar' method = 'POST'>
+                    <input type="hidden" name = "id" value = "{{_id}}">
+                    <button class = "btn btn-danger mt-2">Deletar Usuario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{{else}}
+    <h4>Nenhuma usuario cadastrado</h4>
+{{/each}}

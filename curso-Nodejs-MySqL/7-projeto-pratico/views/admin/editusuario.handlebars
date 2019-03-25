@@ -1,0 +1,19 @@
+<h2>Edit a conta do usuario: </h2>
+<div class = "card mt-4">
+    <div class = "card-body">
+        <form action="/admin/usuario/editar" method="POST">
+            <input type="hidden" name = "id" value="{{usuario._id}}">
+            <label for = "nome">Nome: </label>
+            <input type = "text" name= "nome" class = "form-control" required value = "{{usuario.nome}}">
+
+            <label for = "email">Email: </label>
+            <input type = "email" name= "email" class = "form-control" required value = "{{usuario.email}}">
+
+            <label for = "eAdmin">Privilégios de administrador:  </label>
+            <input type = "number" name= "eAdmin" min="0" max="1" class = "form-control" required value = {{usuario.eAdmin}}>
+
+            <button type = "submit" class = "btn btn-success mt-4">Editar usuario</button>
+        </form>
+    </div>
+</div>
+

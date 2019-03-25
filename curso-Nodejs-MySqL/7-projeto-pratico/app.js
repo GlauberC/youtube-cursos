@@ -37,6 +37,8 @@
             res.locals.error_msg = req.flash('error_msg')
             // Autenticação 4/4
             res.locals.error = req.flash('error')
+
+            res.locals.user = req.user || null
             next()
         })
     // Body Parser

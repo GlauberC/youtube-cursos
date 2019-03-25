@@ -92,6 +92,12 @@ router.get('/login', (req, res) => {
     res.render('usuarios/login')
 })
 
+router.get('/logout', (req, res) => {
+    req.logout()
+    req.flash('success_msg', 'Deslogado com sucesso!')
+    res.redirect('/')
+})
+
 // Autenticação 3/4
 router.post('/loginusuario', (req, res, next) => {
     passport.authenticate('local', {

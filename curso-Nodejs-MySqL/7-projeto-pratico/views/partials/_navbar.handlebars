@@ -15,14 +15,39 @@
       <li class="nav-item">
         <a class="nav-link" href="/categorias">Categorias</a>
       </li>
+      {{#if user.eAdmin}}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/admin/usuarios">Usuarios</a>
+          <a class="dropdown-item" href="/admin/categorias">Categorias</a>
+          <a class="dropdown-item" href="/admin/Postagens">Postagens</a>
+        </div>
+      </li>
+      {{/if}}
     </ul>
+    
     <ul class="nav navbar-nav navbar-right">
+      {{#unless user}}
       <li class="nav-item ">
         <a class="nav-link" href="/usuarios/login">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/usuarios/registro">Registro</a>
       </li>
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link" >{{user.nome}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/usuarios/logout">Sair</a>
+      </li>
+      {{/unless}}
     </ul>
+    
+
+    
   </div>
 </nav>
