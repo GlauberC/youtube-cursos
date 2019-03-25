@@ -8,3 +8,11 @@
 * bcryptjs
 * passport
 * passport-local
+
+
+# Deploy
+* npm init
+* script start
+* db.js
+* mlab - mongo - https://mlab.com/
+

@@ -15,6 +15,7 @@
     const usuarios = require('./routes/usuario')
     const passport = require('passport')
     require('./config/auth')(passport)
+    const db = require('./config/db')
 
 // Configurações
     // Sessão
@@ -51,7 +52,7 @@
 
     // Mongoose
     mongoose.Promise = global.Promise;
-    mongoose.connect("mongodb://localhost/blogapp", {useNewUrlParser: true})
+    mongoose.connect(db.mongoURI, {useNewUrlParser: true})
         .then( () => console.log("MongoDB conectado"))
         .catch( err => console.log("Houve um erro ao se conectar ao mongoDB: " + err))
 
@@ -138,5 +139,5 @@
     
 
 // Outros
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`Servidor rodando em localhost:${PORT}`))
