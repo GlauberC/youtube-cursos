@@ -6,3 +6,4 @@
 
 # Testar api rest
 * insomnia
+* bcryptjs
