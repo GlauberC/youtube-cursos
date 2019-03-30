@@ -1,5 +1,5 @@
     
-const mongoose = require('../databases/index')
+const mongoose = require('../../databases/index')
 const Schema = mongoose.Schema
 const bcrypt = require('bcryptjs')
 
