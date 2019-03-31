@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './components/MyInfo/MyInfo.css';
-import MyInfo from './components/MyInfo/MyInfo'
+import TodoMain from './components/Todo/TodoMain'
 
 class App extends Component {
   render() {
     return (
-      <MyInfo></MyInfo>
+      <TodoMain/>
     )
   }
 }
