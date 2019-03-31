@@ -1,18 +1,24 @@
 import React, {Component} from 'react'
 
 export default class CardBox extends Component{
+    constructor(props){
+        super()
+        this.props = props
+    }
     render(){
         return(
-            <div className = "card mt-4">
-                <div className = "card-body row">
-                    <div className = "col-md-6 offset-md-2">
-                        <p>Titulo da tarefa</p>
-                    </div>
-                    <div className = "col-md-4 form-check">
-                        <input type="checkbox" className="form-check-input" value="1"/>
-                    </div>
-                </div>
+            <div style = {divStyle} className = "row">
+                <input style = {checkboxStyle} type="checkbox" value="1"/>
+                <p>{this.props.taskName}</p>
             </div>
         )
     }
+}
+
+const divStyle = {
+    borderStyle: 'outset'
+}
+const checkboxStyle = {
+    margin: '7px',
+    marginRight: '20px'
 }
