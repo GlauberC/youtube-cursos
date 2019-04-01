@@ -4,14 +4,10 @@ export default class CardBox extends Component{
     constructor(props){
         super()
         this.props = props
-    }
-    render(){
-        return(
-            <div style = {this.divStyle()} className = "row">
-                <input style = {this.checkboxStyle()}  type="checkbox" value="1"/>
-                <p style = {this.styleTaskName()}>{this.props.task.name}</p>
-            </div>
-        )
+        this.state = {
+            completed: this.props.task.completed
+        }
+        this.changeCheckbox = this.changeCheckbox.bind(this)
     }
     divStyle(){
         return{
@@ -25,10 +21,29 @@ export default class CardBox extends Component{
         }
     }
     styleTaskName(){
-        let status = this.props.task.completed ? 'line-through':''
+        let status = this.state.completed ? 'line-through':''
         return {
             textDecoration: status
         }
+    }
+
+    render(){
+        return(
+            <div style = {this.divStyle()} className = "row">
+                <input style = {this.checkboxStyle()}  
+                    type="checkbox"
+                    onChange = {this.changeCheckbox}
+                    checked = {this.state.completed}
+                    value="1"
+                />
+
+                <p style = {this.styleTaskName()}>{this.props.task.name}</p>
+            </div>
+        )
+    }
+
+    changeCheckbox(){
+        this.setState({completed: !this.state.completed})
     }
     
 }
