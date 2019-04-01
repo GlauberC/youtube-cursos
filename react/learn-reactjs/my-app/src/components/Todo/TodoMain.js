@@ -2,13 +2,22 @@ import React, {Component} from 'react'
 import CardBox from './CardBox'
 
 export default class TodoMain extends Component{
+    constructor(){
+        super()
+
+        this.tasks = [
+            {id: '0001', name: "Go to the movies", completed: false},
+            {id: '0002', name: "Study french", completed: false},
+            {id: '0003', name: "Date with my girlfriend", completed: true},
+            {id: '0004', name: "Clean my room", completed: false},
+        ]
+
+        this.tasksComponents = this.tasks.map( task => <CardBox key = {task.id} task = {task}/>)
+    }
     render(){
         return(
             <main className = "container">
-                <CardBox taskName = "Go to the movies"/>
-                <CardBox taskName = "Study french"/>
-                <CardBox taskName = "Date with my girlfriend"/>
-                <CardBox taskName = "Clean my room"/>
+                {this.tasksComponents}
             </main>
         )
     }

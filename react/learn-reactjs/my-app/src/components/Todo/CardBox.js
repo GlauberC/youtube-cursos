@@ -7,18 +7,29 @@ export default class CardBox extends Component{
     }
     render(){
         return(
-            <div style = {divStyle} className = "row">
-                <input style = {checkboxStyle} type="checkbox" value="1"/>
-                <p>{this.props.taskName}</p>
+            <div style = {this.divStyle()} className = "row">
+                <input style = {this.checkboxStyle()}  type="checkbox" value="1"/>
+                <p style = {this.styleTaskName()}>{this.props.task.name}</p>
             </div>
         )
     }
+    divStyle(){
+        return{
+            borderStyle: 'outset'
+        }
+    }
+    checkboxStyle(){
+        return{
+            margin: '7px',
+            marginRight: '20px'
+        }
+    }
+    styleTaskName(){
+        let status = this.props.task.completed ? 'line-through':''
+        return {
+            textDecoration: status
+        }
+    }
+    
 }
 
-const divStyle = {
-    borderStyle: 'outset'
-}
-const checkboxStyle = {
-    margin: '7px',
-    marginRight: '20px'
-}

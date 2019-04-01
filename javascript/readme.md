@@ -1,4 +1,4 @@
-# Funções legais para estudar
+# Funcoes legais para estudar
 * filter
 * map
 * sort
@@ -7,3 +7,4 @@
 * some
 * find
 * findindex
+* spread

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Main from './components/Questions/Main'
+import TodoMain from './components/Todo/TodoMain'
 
 class App extends Component {
   render() {
     return (
-      <Main/>
+      <TodoMain/>
     )
   }
 }
