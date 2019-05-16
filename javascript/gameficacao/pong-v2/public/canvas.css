@@ -1,0 +1,8 @@
+#canvas-game{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+}
