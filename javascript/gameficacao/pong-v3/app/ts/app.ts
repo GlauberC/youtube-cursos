@@ -1,0 +1,3 @@
+
+let gameController = new GameController()
+
