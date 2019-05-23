@@ -1,0 +1,45 @@
+header, main {
+  background-color: rgba(7, 92, 42, 0.2);
+  padding: 1em;
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header button, main button {
+  background-color: rgba(132, 215, 230, 0.8);
+  color: black;
+  margin: 1em;
+}
+
+header button::before, main button::before {
+  content: '> ';
+  opacity: 0.5;
+}
+
+header button:hover, main button:hover {
+  opacity: 0.8;
+}
+
+main {
+  margin-top: 1em;
+}
+
+.btn-enviar-form {
+  background-color: rgba(8, 33, 37, 0.8);
+  color: white;
+}
+
+.btn-enviar-form::before {
+  content: '> ';
+  opacity: 0.5;
+}
+
+.btn-enviar-form:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+@mixin btnFactory($bg, $text) {
+    background-color : $bg;
+    color: $text;
+    &::before{
+        content: '> ';
+        opacity: 0.5;
+    }
+    &:hover{
+        opacity: 0.8;
+    }
+}

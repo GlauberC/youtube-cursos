@@ -1,0 +1,12 @@
+@import './variables';
+@import './factory';
+@import './header';
+
+main{
+    @extend header;
+    margin-top: 1em;
+}
+.btn-enviar-form{
+    @include btnFactory($secundaryBg, $secundaryText);
+
+}

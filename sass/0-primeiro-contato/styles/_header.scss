@@ -1,0 +1,11 @@
+header{
+    background-color: rgba(7, 92, 42, 0.2);
+    padding: 1em; 
+    border: solid 2px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    button{
+        @include btnFactory($primaryBg, $primaryText);
+        margin: 1em;
+    }
+}
