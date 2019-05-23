@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Editando bootstrap</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <a class="navbar-brand" href="#">Sass</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class = "container mt-4">    
+        <button class="btn btn-danger mt-4 offset-md-9"> Back</button>
+        <form class = "form-group mt-4 offset-md-2 col-md-8 offset-md-2">
+            <div class = "form-row">
+                <div class = "col-md-6">
+                    <label for="fname">Firstname</label>
+                    <input type="text" id="fname" name="fname" class = "form-control">
+                </div>
+                <div class = "col-md-6">
+                    <label for="lname">Lastname</label>
+                    <input type="text" id="lname" name="lname" class = "form-control">
+                </div>
+            </div>
+
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" class = "form-control">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class = "form-control">
+            
+
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" class="form-control">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <div class = "form-group">
+                <div class = "form-check">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label for="check" class="form-check-label">Accept Terms & Conditions</label>
+                </div>
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+    
+</body>
+</html>
