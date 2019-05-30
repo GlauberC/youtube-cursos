@@ -1,0 +1,13 @@
+
+.nick{
+margin-top: 0em;
+margin-bottom: 0em;
+margin-left: 1em; 
+}
+.msg{
+margin-bottom: -1em;
+margin-left: 2em; 
+}
+.component-msg{
+margin: 0em; 
+}

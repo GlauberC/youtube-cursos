@@ -1,0 +1,10 @@
+div.msgs{
+    height: 40em;
+    border: solid 0.1em lightgrey;
+    margin: 1em 0;
+    overflow:auto;
+}
+.btn-enviar{
+    margin: 0.5em 0;
+    float: right
+}
